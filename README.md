@@ -13,4 +13,5 @@ Saramsh is a simple text summarization package, developed as a part of my major 
 | demo.ipynb       	| A demo jupiter notebook to demonstrate working of summarizer 	|
 | wsgi.py          	| A simple flask app which uses saramsh package                	|
 
-##### Example code and documentation can be found at : [click here](https://chiranjeevikarthik.me/SARAMSH/saramsh_documentation.html)
+
+##### Example code and documentation can be found at : [click here](https://chiranjeevikarthik.me/SARAMSH/docs)
