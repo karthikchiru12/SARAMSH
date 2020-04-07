@@ -2,7 +2,7 @@
 
 Saramsh is a simple text summarization package, developed as a part of my major project in Btech (Computer science and engineering) @Vardhaman college of engineering. The package uses TF-IDF scoring mechanism to score the sentences and thus retreiving important sentences (Extractive text summarization).
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 |                  	| Description                                                  	|
 |------------------	|--------------------------------------------------------------	|
