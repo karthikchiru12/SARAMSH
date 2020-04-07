@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/docs_style.css">
+    <title>Saramsh</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">SARAMSH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Docs <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/karthikchiru12/SARAMSH">Github</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      <div class="container info">
+          <br><br><br>
+          <div class="card">
+            <div class="card-header">
+                Saramsh is a text-summarization pakage, the current module uses TF_IDF scoring mechanism to summarize.
+              </div>
+            <div class="card-body">
+               <h2 class="convention">saramsh.summarize(data, title) <span class ="source"><a href="https://github.com/karthikchiru12/SARAMSH/blob/21829eccb9ebed4a61eaddb8fbd9d9fc3329da21/saramsh_package/saramsh.py#L327">[source]</a></span></h2> 
+            </div>
+          </div>
+          <br><br>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Parameters :</b></h5>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <b>data : </b> <i> raw text data </i>  <p>All the pre-processing is taken care by the summarize() itself.</p>
+                    </li>
+                    <li class="list-group-item">
+                      <b>title : </b> <i> raw title of the provided data </i>  <p> Title is currently not used in generating summary.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Attributes :</b></h5>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <b>tf_ : </b> <i> term frequency <span class="idtype">[ndArray]</span></i>  <p>Matrix containing how many times each word repeated in a sentence.And the values are normalized by dividing with length of unique words in each sentence.</p>
+                    </li>
+                    <li class="list-group-item">
+                      <b>idf_ : </b> <i> inverse document frequency <span class="idtype">[ndArray]</span></i>  <p>Single row matrix containing idf scores.</p>
+                    </li>
+                    <li class="list-group-item">
+                      <b>tf_idf_ : </b> <i> TF*IDF matrix <span class="idtype">[ndArray]</span></i>  <p>Matrix obtained by multiplying tf into idf matrices.</p>
+                    </li>
+                    <li class="list-group-item">
+                      <b>sentenceScores_ : </b> <i> scores of each sentence <span class="idtype">[list]</span></i>  <p> Title is currently not used in generating summary.</p>
+                    </li>
+                    <li class="list-group-item">
+                      <b>summary : </b> <i> generated summary <span class="idtype">[string]</span></i>  <p> The summary generated using TF-IDF scores.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><b>Notes :</b></h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i><b>TF</b></i> : Term frequency <p>Term_frequency = (Number of times a term 't' occurs in a sentence) / (Total number of unique words in that sentence)</p>
+                </li>
+                <li class="list-group-item">
+                  <i><b>IDF</b></i> : Term frequency <p>Inverse_document_frequency = log((Total number ofdocuments)+1 / (Number of documents in which term 't' appears)+1)</p>
+                </li>
+                <li class="list-group-item">
+                  There are other schemes for both TF and IDF, which can be understood from here : <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">[click here]</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <br><br>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><b>Methods :</b></h5>
+              <p>Here is a class diagram, containing all the methods within the saramsh package.</p>
+              <img src="assets/img/class_diagram.svg" alt="methods">
+              </ul>
+            </div>
+          </div>
+
+          <br><br>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><b>A typical workflow :</b></h5>
+              <p>Below is an workflow of how the module generates summary using the given data.</p>
+              <img src="assets/img/workflow.svg" alt="methods">
+              </ul>
+            </div>
+          </div>
+          <br><br>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><b>Sample code :</b></h5>
+              <p>Below is simple starter code  : </p><br>
+              <p>Data was taken from this article : <a href="https://www.hindustantimes.com/bollywood/divya-dutta-i-once-lost-a-role-because-i-was-told-i-am-fair/story-pz7tBk7jilquUCYwCpgopJ.html">[click here for article]</a>
+                <br>This is an inshorts summary of above article : <a href="https://inshorts.com/en/news/i-once-lost-a-role-because-i-was-told-i-am-too-fair-actress-divya-dutta-1579069565433">[click here fro inshort summary]</a>
+                <br>
+              </p>
+              <pre><code>
+                from saramsh_package.saramsh import Saramsh
+                sm = Saramsh(data,title)
+                sm.summarize()  
+                </code></pre>
+                Output : (summary generated by our program)<br><br>
+                <samp class="output">0.9810933498889896<br><br>
+
+                  Divya Dutta: ‘I once lost a role because I was told I am fair’ <br><br>
+                
+                
+                She wants to do your role.Earlier, we used to say chhota role nahi karenge.I never said that, but I have seen girls say it.Now they say chhota hai, koi baat nahi, impactful hai na?Divya herself had to colour her skin for Delhi 6.They were looking for a village woman who is darker.They told me you suit the role completely.I asked then why am I not doing it?They replied you are too fair for the role.But I am an actor.I was darkened for Delhi 6.</samp>
+              </ul>
+            </div>
+          </div>
+
+
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://chiranjeevikarthik.me/"> Chiranjeevi karthik</a>
+    </div>
+          
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

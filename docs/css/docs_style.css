@@ -1,0 +1,41 @@
+
+.info
+{
+    margin-left: auto;margin-right: auto;
+
+}
+.convention
+{
+    font-style: oblique;
+    font-size: xx-large;
+
+}
+.source
+{
+    font-size: small;
+    float: right;
+}
+.idtype
+{
+    float: right;
+    align-self: flex-end;
+}
+@media (min-width: 468px) {
+    .convention {
+      font-size: 18px;
+    }
+  }
+@media (min-width: 768px) {
+    .convention {
+      font-size: 20px;
+    }
+  }
+  @media (min-width: 992px) {
+    .convention {
+      font-size: 30px;
+    }
+  }
+.output
+{
+    font-size: medium;
+    color: mediumblue;
