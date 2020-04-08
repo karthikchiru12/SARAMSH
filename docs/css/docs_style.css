@@ -39,3 +39,43 @@
 {
     font-size: medium;
     color: mediumblue;
+
+}
+
+.gn
+{
+  color: green;
+}
+.mr
+{
+  color: maroon;
+}
+.ib
+{
+  color: #0e84b5;;
+
+}
+.blck
+{
+  color: black;
+}
+.req
+{
+    font-size: large;
+}
+.code
+{
+  background-color: whitesmoke;
+  padding:1ex;
+}
+
+@media (min-width: 468px) {
+  .code {
+    padding:0.5px;
+  }
+}
+.block_code
+{
+  display: block;
+  padding: inherit;
+}

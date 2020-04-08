@@ -5,8 +5,9 @@ import pandas as pd
 import string
 import sys
 
-from scipy.sparse import csr_matrix
-from sklearn.preprocessing import normalize
+#Uncomment these lines if you want result as csr matrix...in __transform() method
+#from scipy.sparse import csr_matrix
+#from sklearn.preprocessing import normalize
 from nltk import tokenize
 
 
