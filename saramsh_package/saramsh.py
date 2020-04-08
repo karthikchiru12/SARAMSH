@@ -280,7 +280,7 @@ class Saramsh:
         # Average value of a sentence from original summary_text
         average = (sumValues / len(sentenceValues))
         print(average)
-        return average
+        return average+0.3*average
 
     def __generate_summary(self, sentences, sentenceValues, threshold):
         summary = ""
