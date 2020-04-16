@@ -5,9 +5,8 @@ import pandas as pd
 import string
 import sys
 
-#Uncomment these lines if you want result as csr matrix...in __transform() method
-#from scipy.sparse import csr_matrix
-#from sklearn.preprocessing import normalize
+from scipy.sparse import csr_matrix
+from sklearn.preprocessing import normalize
 from nltk import tokenize
 
 
@@ -91,9 +90,10 @@ class Saramsh:
     
     def __remove_stopwords(self, string):
         no_stopwords = ""
-        for char in string:
-            if char not in stopwords:
-                no_stopwords = no_stopwords + char
+        words = tokenize.word_tokenize(string)
+        for word in words:
+            if word not in stopwords:
+                no_stopwords += word+" "
         string = no_stopwords
         return string
     
@@ -280,7 +280,7 @@ class Saramsh:
         # Average value of a sentence from original summary_text
         average = (sumValues / len(sentenceValues))
         print(average)
-        return average+0.3*average
+        return average
 
     def __generate_summary(self, sentences, sentenceValues, threshold):
         summary = ""
